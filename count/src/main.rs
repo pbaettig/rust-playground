@@ -42,7 +42,6 @@ impl CountResult {
 fn count(input: InputSource) -> CountResult {
    let mut r = CountResult { source: input.display(), lines: 0, words: 0, characters: 0};
   
-    // read lines in buf_reader...
     for line in input.reader().lines() {
         let line_length = match &line {
             Err(_) => 0,
